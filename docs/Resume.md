@@ -2,7 +2,7 @@
 
 Halethorpe, MD 21227  
 [e200@umbc.edu](mailto:e200@umbc.edu) | +1 (667) 445-8558  
-🔗 [LinkedIn](https://linkedin.com/in/sushma-evs) | [GitHub](https://github.com/sushma62216)  
+[LinkedIn](https://linkedin.com/in/sushma-evs) | [GitHub](https://github.com/sushma62216)  
 
 ---
 
@@ -22,7 +22,7 @@ Graduate student pursuing a **Master’s in Data Science** and an aspiring **Dat
 ## Education  
 **Master of Professional Studies: Data Science**  
 *University of Maryland, Baltimore County – Baltimore, MD*  
-📅 Jan 2024 – Dec 2025  
+Jan 2024 – Dec 2025  
 - GPA: **3.9/4.0**  
 - Coursework: Big Data Platforms, Introduction to Machine Learning, Data Management  
 
@@ -30,7 +30,7 @@ Graduate student pursuing a **Master’s in Data Science** and an aspiring **Dat
 
 ## Experience  
 **Software Developer** – *Appleute, Hammelburg, Germany*  
-📅 May 2022 – Jan 2023  
+May 2022 – Jan 2023  
 - Gained hands-on experience in **Machine Learning**, applying various algorithms for data analysis and predictive modeling.  
 - Led a project on **anomaly detection**, utilizing Neural Networks, Linear Regression, and Logistic Regression to identify irregular patterns in datasets and visualize them through interactive graphs.  
 - Conducted research on **Computer Vision**, implementing the **YOLO v3** algorithm for object detection in images, improving model accuracy and recognition performance.  
