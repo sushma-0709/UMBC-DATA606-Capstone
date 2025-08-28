@@ -1,7 +1,7 @@
 # Venkata Sai Sushma Emmadi
 
 Halethorpe, MD 21227  
-[e200@umbc.edu](mailto:e200@umbc.edu) | +1 (667) 445-8558  
+[e200@umbc.edu](mailto:e200@umbc.edu) 
 [LinkedIn](https://linkedin.com/in/sushma-evs) | [GitHub](https://github.com/sushma62216)  
 
 ---
