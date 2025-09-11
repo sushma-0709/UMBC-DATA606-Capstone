@@ -1,4 +1,4 @@
-# WalletScope : Classification of blockchain wallets
+# WalletScope : Classification of Blockchain Wallets
 ####  Prepared for UMBC Data Science Master Degree Capstone by Dr Chaojie (Jay) Wang
 #### Author Name : Venkata Sai Sushma Emmadi
 #### Link to GitHub repo: https://github.com/sushma-0709/UMBC-DATA606-Capstone
@@ -224,6 +224,7 @@ We will use **XGBoost** for its high accuracy with tabular data, effective handl
 ## Future Enhancements
 - **Expand blockchain coverage:** Integrate additional blockchains (e.g., Ethereum, Bitcoin) to broaden analysis and support cross-chain wallet classification.
 - **Real-time classification:** Enable streaming data ingestion and near real-time wallet classification for proactive monitoring and alerting.
+
 
 
 
