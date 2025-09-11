@@ -140,6 +140,9 @@ Inputs reference previous outputs and represent the source of funds for a transa
 ---
 
 ## Architecture
+
+<img width="1536" height="1024" alt="architecture" src="https://github.com/user-attachments/assets/6ace40b7-674e-4599-b7fd-f38edfdec115" />
+
 The project employs a **modern data stack**—including Snowflake, dbt, Airflow, machine learning, and Power BI—to automate data processing, feature engineering, model training, and visualization.
 1. **Blockchair (Extract)**  
     - Utilizes Blockchair’s public blockchain data dumps to extract comprehensive datasets for cryptocurrencies like Litecoin.
@@ -221,6 +224,7 @@ We will use **XGBoost** for its high accuracy with tabular data, effective handl
 ## Future Enhancements
 - **Expand blockchain coverage:** Integrate additional blockchains (e.g., Ethereum, Bitcoin) to broaden analysis and support cross-chain wallet classification.
 - **Real-time classification:** Enable streaming data ingestion and near real-time wallet classification for proactive monitoring and alerting.
+
 
 
 
