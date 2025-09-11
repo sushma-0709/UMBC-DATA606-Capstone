@@ -7,7 +7,7 @@
 ## Project Overview
 This project focuses on classifying blockchain wallets using data from Blockchair’s Litecoin dataset. A blockchain wallet is a digital address used to send, receive, and store cryptocurrency. Wallets vary in behavior—some belong to individual users, others to large holders (Whales), and some to Exchanges or Merchants that handle transactions for many users.
 
-Classifying wallets matters because it provides financial insights by identifying Whales who can influence market stability, supports fraud detection by spotting unusual activity, and aids market analysis by distinguishing genuine adoption from exchange-driven flows. Ultimately, wallet classification enables better understanding of transaction flows in blockchain ecosystems.
+Classifying wallets matters because it provides financial insights by identifying Whales who can influence market stability, supports fraud detection by spotting unusual activity, and aids market analysis. Ultimately, wallet classification enables better understanding of transaction flows in blockchain ecosystems.
 
 ---
 
@@ -224,6 +224,7 @@ We will use **XGBoost** for its high accuracy with tabular data, effective handl
 ## Future Enhancements
 - **Expand blockchain coverage:** Integrate additional blockchains (e.g., Ethereum, Bitcoin) to broaden analysis and support cross-chain wallet classification.
 - **Real-time classification:** Enable streaming data ingestion and near real-time wallet classification for proactive monitoring and alerting.
+
 
 
 
