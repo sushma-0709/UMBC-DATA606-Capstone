@@ -205,25 +205,26 @@ We will use **XGBoost** for its high accuracy with tabular data, effective handl
 | `first_seen`            | `addresses.tsv`                                        | Direct           | Date the wallet was first observed                                                          |
 | `last_seen`             | `addresses.tsv`                                        | Direct           | Date the wallet was last active                                                             |
 | `activity_days`         | `addresses.tsv`                                        | Derived          | `last_seen – first_seen`                                                                    |
-| `num_incoming_tx`       | `transactions_outputs.tsv`                             | Derived          | Count of transactions where wallet received coins                                           |
-| `total_received`        | `transactions_outputs.tsv`                             | Derived          | Sum of all incoming transaction values                                                      |
-| `avg_incoming_value`    | `transactions_outputs.tsv`                             | Derived          | Average value of incoming transactions                                                      |
-| `num_outgoing_tx`       | `transactions_inputs.tsv`                              | Derived          | Count of transactions where wallet sent coins                                               |
-| `total_sent`            | `transactions_inputs.tsv`                              | Derived          | Sum of all outgoing transaction values                                                      |
-| `avg_outgoing_value`    | `transactions_inputs.tsv`                              | Derived          | Average value of outgoing transactions                                                      |
+| `num_incoming_tx`       | `outputs.tsv`                             | Derived          | Count of transactions where wallet received coins                                           |
+| `total_received`        | `outputs.tsv`                             | Derived          | Sum of all incoming transaction values                                                      |
+| `avg_incoming_value`    | `outputs.tsv`                             | Derived          | Average value of incoming transactions                                                      |
+| `num_outgoing_tx`       | `inputs.tsv`                              | Derived          | Count of transactions where wallet sent coins                                               |
+| `total_sent`            | `inputs.tsv`                              | Derived          | Sum of all outgoing transaction values                                                      |
+| `avg_outgoing_value`    | `inputs.tsv`                              | Derived          | Average value of outgoing transactions                                                      |
 | `total_tx`              | Computed                                               | Derived          | `num_incoming_tx + num_outgoing_tx`                                                         |
 | `avg_tx_value`          | Computed                                               | Derived          | `(avg_incoming_value + avg_outgoing_value)/2`                                               |
-| `inputs_per_tx_avg`     | `transactions.tsv` + `transactions_inputs.tsv`         | Derived          | Average number of inputs per outgoing transaction                                           |
-| `outputs_per_tx_avg`    | `transactions.tsv` + `transactions_outputs.tsv`        | Derived          | Average number of outputs per outgoing transaction                                          |
-| `unique_counterparties` | `transactions_inputs.tsv` + `transactions_outputs.tsv` | Derived          | Number of distinct wallets this wallet interacted with                                      |
-| `fee_ratio`             | `transactions.tsv` + `transactions_inputs.tsv`         | Derived          | Total fee divided by total transaction value (optional)                                     |
-| `wallet_category`       | Computed                                               | Derived          | Target variable: Small / Whale / Exchange/Merchant (based on balance & total\_tx quantiles) |
+| `inputs_per_tx_avg`     | `transactions.tsv` + `inputs.tsv`         | Derived          | Average number of inputs per outgoing transaction                                           |
+| `outputs_per_tx_avg`    | `transactions.tsv` + `outputs.tsv`        | Derived          | Average number of outputs per outgoing transaction                                          |
+| `unique_counterparties` | `inputs.tsv` + `outputs.tsv` | Derived          | Number of distinct wallets this wallet interacted with                                      |
+| `fee_ratio`             | `transactions.tsv` + `inputs.tsv`         | Derived          | Total fee divided by total transaction value                                   |
+| `wallet_category`       | Computed                                               | Derived          | Target variable: Small / Whale / Exchange/Merchant |
 
 ---
 
 ## Future Enhancements
 - **Expand blockchain coverage:** Integrate additional blockchains (e.g., Ethereum, Bitcoin) to broaden analysis and support cross-chain wallet classification.
 - **Real-time classification:** Enable streaming data ingestion and near real-time wallet classification for proactive monitoring and alerting.
+
 
 
 
