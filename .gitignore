@@ -1,0 +1,29 @@
+# Local environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Data outputs (do not commit large derived files)
+data/processed/
+*.feather
+*.parquet
+
+# OS/editor
+.DS_Store
+.vscode/*.log
+.vscode/settings.json
+
+#data
+data/litecoin/
+
+# Python virtual environment
+.venv
+
+# logs
+logs/
