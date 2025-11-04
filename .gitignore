@@ -1,32 +1,170 @@
-# Local environment
+# ============================================================================
+# Local Environment & Secrets
+# ============================================================================
 .env
+.env.local
+.env.*.local
+.env.*.bak
 
+# ============================================================================
 # Python
+# ============================================================================
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Jupyter
+# ============================================================================
+# Virtual Environments
+# ============================================================================
+.venv
+venv/
+ENV/
+env/
+.venv/
+virtualenv/
+
+# ============================================================================
+# Jupyter Notebooks
+# ============================================================================
 .ipynb_checkpoints/
 notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints/
+.jupyterlab/
 
-# Data outputs (do not commit large derived files)
+# ============================================================================
+# Data Files
+# ============================================================================
+data/litecoin/
 data/processed/
+data/*.csv
+data/*.csv.gz
+data/*.tsv
+data/*.tsv.gz
+data/*.feather
+data/*.parquet
+data/*.pkl
+data/*.json
+
+# Large binary files
 *.feather
 *.parquet
+*.pkl
+*.joblib
 
-# OS/editor
+# ============================================================================
+# Machine Learning Models
+# ============================================================================
+models/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+checkpoints/
+
+# ============================================================================
+# IDE & Editor
+# ============================================================================
 .DS_Store
+.vscode/
 .vscode/*.log
 .vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
 
-#data
-data/litecoin/
-
-# Python virtual environment
-.venv
-
-# logs
+# ============================================================================
+# Logs & Output
+# ============================================================================
 logs/
+*.log
+output/
+results/
+*.out
+.pytest_cache/
 
-# dbt target directory
+# ============================================================================
+# Test & Coverage
+# ============================================================================
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.hypothesis/
+
+# ============================================================================
+# DBT (Data Build Tool)
+# ============================================================================
 .dbt/
+target/
+dbt_packages/
+logs/dbt.log
+profiles.yml
+
+# ============================================================================
+# Snowflake
+# ============================================================================
+snowflake-cli*.deb
+*.deb
+
+# ============================================================================
+# Build & Distribution
+# ============================================================================
+*.egg-info/
+*.whl
+dist/
+build/
+.build/
+
+# ============================================================================
+# Documentation
+# ============================================================================
+site/
+docs/_build/
+.sphinx/
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp
+.env.bak
+config.local.yml
+secrets/

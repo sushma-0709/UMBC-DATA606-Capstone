@@ -1,0 +1,174 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "walletscope"
+version = "0.1.0"
+description = "Litecoin wallet classification using blockchain data analysis"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Sushma Emmadi", email = "sushmaevs@gmail.com"}
+]
+keywords = ["blockchain", "litecoin", "machine-learning", "data-science", "wallet-classification"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+requires-python = ">=3.8"
+
+dependencies = [
+    # Data Processing
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "requests>=2.31.0",
+
+    # Database & Cloud
+    "snowflake-connector-python>=3.0.0",
+    "boto3>=1.28.0",
+    "python-dotenv>=1.0.0",
+    "toml>=0.10.2",
+    "PyYAML>=6.0.0",
+
+    # Machine Learning
+    "scikit-learn>=1.3.0",
+    "xgboost>=2.0.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+
+    # Jupyter & Analysis
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+    "ipython>=8.0.0",
+
+    # dbt (Data Build Tool)
+    "dbt-snowflake>=1.10.0",
+    "dbt-core>=1.10.0",
+
+    # Utilities
+    "click>=8.0.0",
+    "Pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "isort>=5.12.0",
+    "pre-commit>=3.0.0",
+]
+
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.11.0",
+]
+
+dbt = [
+    "dbt-snowflake>=1.10.0",
+    "dbt-core>=1.10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sushma-0709/UMBC-DATA606-Capstone"
+Repository = "https://github.com/sushma-0709/UMBC-DATA606-Capstone.git"
+Documentation = "https://github.com/sushma-0709/UMBC-DATA606-Capstone/blob/main/DEVELOPMENT.md"
+"Bug Tracker" = "https://github.com/sushma-0709/UMBC-DATA606-Capstone/issues"
+
+[tool.setuptools]
+packages = ["Scripts", "utils"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | notebooks
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+known_first_party = ["Scripts", "utils"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+strict_optional = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "snowflake.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "xgboost.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "toml.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=Scripts --cov=utils --cov-report=html --cov-report=term-missing"
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["Scripts", "utils"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
