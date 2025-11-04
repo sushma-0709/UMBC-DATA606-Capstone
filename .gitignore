@@ -27,3 +27,6 @@ data/litecoin/
 
 # logs
 logs/
+
+# dbt target directory
+.dbt/
