@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_wallet_transfers
+    description: >
+      Intermediate model that unions incoming and outgoing transfers for all wallets.
+      Each row represents a single transfer direction (incoming or outgoing) for a transaction.
+    columns:
+      - name: transaction_hash
+        description: Unique identifier for the transaction.
+        tests:
+          - not_null
+      - name: tx_date
+        description: Date of the transaction.
+        tests:
+          - not_null
+      - name: address
+        description: Wallet address involved in the transfer.
+        tests:
+          - not_null
+      - name: direction
+        description: Transfer direction - either 'incoming' or 'outgoing'.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['incoming', 'outgoing']

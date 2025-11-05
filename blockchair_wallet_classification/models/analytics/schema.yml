@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: wallet_classification
+    description: >
+      Categorizes wallets based on total received LTC and activity levels.
+      Useful for identifying whales, exchanges, and dormant addresses.
+    columns:
+      - name: address
+        description: Wallet address.
+        tests:
+          - not_null
+          - unique
+      - name: total_received
+        description: Total LTC received by the wallet.
+      - name: total_sent
+        description: Total LTC sent by the wallet.
+      - name: net_balance
+        description: Net LTC balance for the wallet.
+      - name: wallet_type
+        description: Wallet category (Exchange/Whale, Active Wallet, Dormant/Small Wallet).
+        tests:
+          - not_null
+
+  

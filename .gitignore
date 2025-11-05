@@ -32,3 +32,6 @@ logs/
 .dbt/  # dbt profiles directory (contains credentials)
 target/  # dbt compiled SQL and run artifacts
 dbt_packages/  # dbt package dependencies
+
+.dbt
+

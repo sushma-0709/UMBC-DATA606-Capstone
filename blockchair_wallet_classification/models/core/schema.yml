@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: wallet_activity
+    description: >
+      Aggregated wallet-level metrics including total LTC sent, received, and net balance.
+      This model combines input and output transaction data to give a complete view
+      of wallet activity on the Litecoin blockchain.
+    columns:
+      - name: address
+        description: Unique wallet address on the Litecoin network.
+        tests:
+          - not_null
+          - unique
+      - name: total_received
+        description: Total amount of LTC received by the address.
+        tests:
+          - not_null
+      - name: total_sent
+        description: Total amount of LTC sent by the address.
+        tests:
+          - not_null
+      - name: net_balance
+        description: Net LTC balance (received - sent) for the wallet.
+
+  - name: transaction_summary
+    description: >
+      Block-level aggregation of transactions, providing insight into network activity,
+      transaction volume, and fee distribution across blocks.
+    columns:
+      - name: block_id
+        description: Unique identifier of the block in the Litecoin blockchain.
+        tests:
+          - not_null
+          - unique
+      - name: block_date
+        description: Date of the block.
+        tests:
+          - not_null
+      - name: total_transactions
+        description: Number of transactions in the block.
+        tests:
+          - not_null
+      - name: total_fees_ltc
+        description: Total transaction fees (in LTC) collected in the block.
+      - name: avg_fee_ltc
+        description: Average transaction fee (in LTC) within the block.
+      - name: total_output_ltc
+        description: Total LTC output across all transactions in the block.
+      - name: total_input_ltc
+        description: Total LTC input across all transactions in the block.

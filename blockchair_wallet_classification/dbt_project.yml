@@ -1,0 +1,56 @@
+name: 'blockchair_wallet_classification'
+version: '1.0.0'
+config-version: 2
+
+profile: 'blockchair_wallet_classification'   # Must match your profiles.yml entry
+
+# ─────────────────────────────────────────────
+# FOLDER STRUCTURE & MODEL ORGANIZATION
+# ─────────────────────────────────────────────
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+# ─────────────────────────────────────────────
+# MODEL CONFIGURATION
+# ─────────────────────────────────────────────
+models:
+  blockchair_wallet_classification:
+    +materialized: view
+
+    staging:
+      +schema: staging
+      +materialized: view
+      +tags: ["staging"]
+
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+      +tags: ["intermediate"]
+
+    core:
+      +schema: core
+      +materialized: table
+      +tags: ["core"]
+
+    analytics:
+      +schema: analytics
+      +materialized: table
+      +tags: ["analytics"]
+
+# ─────────────────────────────────────────────
+# DOCUMENTATION SETTINGS
+# ─────────────────────────────────────────────
+vars:
+  dbt_date: '{{ run_started_at.strftime("%Y-%m-%d") }}'
+
+# ─────────────────────────────────────────────
+# TESTS, HOOKS, ETC.
+# ─────────────────────────────────────────────
+tests:
+  +severity: warn

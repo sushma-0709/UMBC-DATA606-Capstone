@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    database: LITECOIN
+    schema: RAW
+    tables:
+      - name: addresses
+      - name: blocks
+      - name: inputs
+      - name: outputs
+      - name: transactions
