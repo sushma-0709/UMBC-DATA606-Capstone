@@ -28,6 +28,8 @@ data/litecoin/
 # logs
 logs/
 
+.claude
+
 # dbt
 .dbt/  # dbt profiles directory (contains credentials)
 target/  # dbt compiled SQL and run artifacts
