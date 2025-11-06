@@ -18,11 +18,5 @@ with agg as (
     group by address
 )
 
-select
-    *,
-    case
-        when lifetime_received_ltc > 1000 then 'Whale/Exchange'
-        when lifetime_received_ltc between 10 and 1000 then 'Active Wallet'
-        else 'Dormant/Small Wallet'
-    end as wallet_label
+select *
 from agg

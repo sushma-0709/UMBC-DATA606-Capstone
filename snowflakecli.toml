@@ -21,3 +21,13 @@ save_logs = true
 level = "info"
 path = "/root/UMBC-DATA606-Capstone/logs"
 
+[connections.wallet_classification]
+
+account = "${SNOWFLAKE_ACCOUNT}"
+user = "${SNOWFLAKE_USER}"
+password = "${SNOWFLAKE_PASSWORD}"
+warehouse = "${SNOWFLAKE_WAREHOUSE}"
+database = "${SNOWFLAKE_DATABASE}"
+schema = "${WALLET_SCHEMA}"
+role="${SNOWFLAKE_ROLE}"
+
