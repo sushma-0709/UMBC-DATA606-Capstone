@@ -10,7 +10,7 @@ with agg as (
         sum(total_received) as lifetime_received_ltc,
         sum(total_sent) as lifetime_sent_ltc,
         sum(daily_fee_ltc) as total_fees_paid_ltc,
-        max(balance_ltc) as current_balance_ltc,
+        coalesce(max(balance_ltc), 0) as current_balance_ltc,
         avg(tx_count) as avg_tx_per_day,
         avg(total_received) as avg_received_per_day,
         avg(total_sent) as avg_sent_per_day
