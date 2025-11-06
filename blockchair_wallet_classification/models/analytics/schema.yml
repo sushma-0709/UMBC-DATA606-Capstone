@@ -17,9 +17,6 @@ models:
         description: Total LTC sent by the wallet.
       - name: net_balance
         description: Net LTC balance for the wallet.
-      - name: wallet_type
-        description: Wallet category (Exchange/Whale, Active Wallet, Dormant/Small Wallet).
-        tests:
-          - not_null
+
 
   

@@ -24,22 +24,22 @@ models:
     +materialized: view
 
     staging:
-      +schema: staging
+      schema: staging
       +materialized: view
       +tags: ["staging"]
 
     intermediate:
-      +schema: intermediate
+      schema: intermediate
       +materialized: view
       +tags: ["intermediate"]
 
     core:
-      +schema: core
+      schema: core
       +materialized: table
       +tags: ["core"]
 
     analytics:
-      +schema: analytics
+      schema: analytics
       +materialized: table
       +tags: ["analytics"]
 
