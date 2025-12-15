@@ -14,7 +14,7 @@
 |----------|------|
 | GitHub Repository | [View Repository](https://github.com/sushma-0709/UMBC-DATA606-Capstone) |
 | YouTube Presentation | [Watch the Video Presentation](#) |
-| PowerPoint Presentation | [View Final PPT](#) |
+| PowerPoint Presentation | [View Final PPT](https://docs.google.com/presentation/d/10uUQ2bS4B_PLOdnNf7CO5e2t-WPFfvhA/edit?usp=sharing&ouid=100176323177110534783&rtpof=true&sd=true) |
 | LinkedIn | [Venkata Sai Sushma Emmadi](https://www.linkedin.com/in/sushma-evs-514687170/) |
 
 ---
