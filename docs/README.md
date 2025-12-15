@@ -1,9 +1,13 @@
 # WalletScope: Classification of Blockchain Wallets Using Machine Learning
 
 **Author:** Venkata Sai Sushma Emmadi
+
 **Semester:** Fall 2025
+
 **Course:** DATA 606 - Capstone in Data Science
+
 **University:** University of Maryland, Baltimore County (UMBC)
+
 **Advisor:** Dr. Chaojie (Jay) Wang
 
 ---
